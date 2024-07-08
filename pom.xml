@@ -9,6 +9,18 @@
   <url>https://maven.apache.org</url>
 
   <dependencies>
+    <dependency>
+      <groupId>org.thymeleaf</groupId>
+      <artifactId>thymeleaf</artifactId>
+      <version>3.0.12.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.thymeleaf</groupId>
+      <artifactId>thymeleaf-spring5</artifactId>
+      <version>3.0.12.RELEASE</version>
+    </dependency>
+
+
     <!-- JUnit for testing -->
     <dependency>
       <groupId>junit</groupId>
@@ -50,7 +62,7 @@
     <dependency>
       <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>6.1.7.Final</version>
+      <version>6.5.2.Final</version>
     </dependency>
 
     <!-- Jakarta Persistence API -->
@@ -67,27 +79,30 @@
       <version>2.0.0</version>
     </dependency>
 
-    <!-- Jakarta Servlet API -->
-    <!-- <dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
-      <scope>provided</scope>
-    </dependency> -->
-
-    <!-- Jakarta Persistence API -->
-    <!-- <dependency>
-      <groupId>jakarta.persistence</groupId>
-      <artifactId>jakarta.persistence-api</artifactId>
-      <version>3.1.0</version>
-    </dependency> -->
-
     <!-- Tomcat DBCP -->
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-dbcp</artifactId>
       <version>10.1.10</version>
     </dependency>
+
+
+
+    <!-- SLF4J API -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.32</version>
+    </dependency>
+
+    <!-- Logback Classic -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>

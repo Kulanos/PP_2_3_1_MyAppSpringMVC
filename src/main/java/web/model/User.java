@@ -28,13 +28,7 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String name, String surname, int age, String email) {
-        this.id=id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.email = email;
-    }
+
 
     public User(String name, String surname, int age, String email) {
         this.name = name;
