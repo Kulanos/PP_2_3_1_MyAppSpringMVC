@@ -23,12 +23,12 @@
             <td><c:out value="${user.surname}" /></td>
             <td><c:out value="${user.age}" /></td>
             <td><c:out value="${user.email}" /></td>
-            <td><a href="<c:url value='/edit/${user.id}' />">Edit</a></td>
-            <td><a href="<c:url value='/delete/${user.id}' />">Delete</a></td>
+            <td><a href="${pageContext.request.contextPath}/edit?id=${user.id}">Edit</a></td>
+            <td><a href="${pageContext.request.contextPath}/delete?id=${user.id}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
 <br>
-<a href="<c:url value='/add' />">Add New User</a>
+<a href="${pageContext.request.contextPath}/add">Add New User</a>
 </body>
 </html>
