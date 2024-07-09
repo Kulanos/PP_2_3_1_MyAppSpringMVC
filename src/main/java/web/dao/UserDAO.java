@@ -2,7 +2,6 @@ package web.dao;
 
 import web.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface UserDAO {

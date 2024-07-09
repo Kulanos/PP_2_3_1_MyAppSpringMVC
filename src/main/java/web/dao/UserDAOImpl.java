@@ -1,26 +1,18 @@
 package web.dao;
 
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.persistence.*;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
-
-
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-@Transactional
 public class UserDAOImpl implements UserDAO{
 
-    private final EntityManager entityManager;
-
-    @Autowired
-    public UserDAOImpl(EntityManagerFactory entityManagerFactory) {
-        this.entityManager = entityManagerFactory.createEntityManager();
-    }
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Override
     @Transactional(readOnly = true)
@@ -48,6 +40,4 @@ public class UserDAOImpl implements UserDAO{
     public User getById(Long id) {
         return entityManager.find(User.class, id);
     }
-
-
 }
